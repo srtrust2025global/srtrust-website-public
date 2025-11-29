@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import Splash from './components/Splash';
-import trust1 from './logo/trust1.png';
+import trust1 from './logo/trust_loader.png';
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
@@ -12,7 +12,13 @@ if (!rootElement) {
 const RootWithSplash: React.FC = () => {
   // exclusively show the splash once per origin/domain
   const localKey = 'sr_splash_shown';
-  const [showApp, setShowApp] = React.useState<boolean>(() => Boolean(localStorage.getItem(localKey)));
+  const [showApp, setShowApp] = React.useState<boolean>(() => {
+    try {
+      return Boolean(localStorage.getItem(localKey));
+    } catch (e) {
+      return false;
+    }
+  });
 
   const handleFinish = () => {
     try {
@@ -27,7 +33,7 @@ const RootWithSplash: React.FC = () => {
   // Otherwise we render Splash and hide the app until finished.
   return (
     <>
-      {!showApp && <Splash duration={4000} onFinish={handleFinish} logoSrc={trust1} />}
+      {!showApp && <Splash onFinish={handleFinish} logoSrc={trust1} />}
       {showApp && <App />}
     </>
   );

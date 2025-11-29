@@ -1,35 +1,54 @@
 import React from 'react';
 
 type Props = {
-  duration?: number; // milliseconds the splash stays fully visible
   onFinish?: () => void;
   logoSrc?: string;
+  // optional override timings (ms)
+  growMs?: number; // how long the logo grows (default 2000)
+  holdMs?: number; // how long to hold at full size (default 500)
+  fadeMs?: number; // fade-out time (default 500)
 };
 
-const Splash: React.FC<Props> = ({ duration = 4000, onFinish, logoSrc }) => {
+const Splash: React.FC<Props> = ({ onFinish, logoSrc, growMs = 2000, holdMs = 500, fadeMs = 500 }) => {
+  const [grown, setGrown] = React.useState(false);
   const [fading, setFading] = React.useState(false);
 
   React.useEffect(() => {
-    // After duration, start fade-out
-    const t = setTimeout(() => setFading(true), duration);
-    // After fade duration finish, notify parent
-    const fadeMs = 500;
-    const t2 = setTimeout(() => onFinish && onFinish(), duration + fadeMs);
+    // start the grow animation right after mount (allow initial render)
+    const startTimer = setTimeout(() => setGrown(true), 30);
+
+    // after grow + hold, start fade
+    const tFade = setTimeout(() => setFading(true), growMs + holdMs);
+
+    // after grow + hold + fade, finish and notify parent
+    const tFinish = setTimeout(() => onFinish && onFinish(), growMs + holdMs + fadeMs);
 
     return () => {
-      clearTimeout(t);
-      clearTimeout(t2);
+      clearTimeout(startTimer);
+      clearTimeout(tFade);
+      clearTimeout(tFinish);
     };
-  }, [duration, onFinish]);
+  }, [growMs, holdMs, fadeMs, onFinish]);
 
   return (
     <div
       aria-hidden={!logoSrc}
-      className={`fixed inset-0 z-[200] flex items-center justify-center bg-white dark:bg-[#111] transition-opacity duration-500 ${
+      className={`fixed inset-0 z-[200] flex items-center justify-center bg-white dark:bg-[#111] ${
         fading ? 'opacity-0 pointer-events-none' : 'opacity-100'
       }`}
+      // fade transition duration matches fadeMs
+      style={{ transition: `opacity ${fadeMs}ms ease` }}
     >
-      <div className="flex flex-col items-center gap-6 px-6">
+      <div
+        // logo container: start very small with transform-origin bottom center and grow to full size
+        className="flex flex-col items-center gap-6 px-6"
+        style={{
+          transformOrigin: 'bottom center',
+          // transition for the grow (transform)
+          transition: `transform ${growMs}ms cubic-bezier(.2,.9,.2,1)`,
+          transform: grown ? 'scale(1)' : 'scale(0.04) translateY(24px)',
+        }}
+      >
         {logoSrc ? (
           <img
             src={logoSrc}
@@ -39,7 +58,8 @@ const Splash: React.FC<Props> = ({ duration = 4000, onFinish, logoSrc }) => {
         ) : (
           <div className="w-24 h-24 bg-gray-200 dark:bg-gray-800 rounded-md" />
         )}
-        <div className="text-center text-xs text-gray-500 dark:text-gray-300">Powered by SR Trust</div>
+
+        {/* caption removed as requested */}
       </div>
     </div>
   );
