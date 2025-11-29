@@ -27,12 +27,12 @@ const Work: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
           <h1 className="font-heading font-bold text-5xl md:text-7xl mb-6">Our Impact Gallery</h1>
           <p className="text-gray-300 max-w-2xl mx-auto mb-10 text-lg">
-            Explore our sustainable solutions across Bihar, Odisha, Jharkhand, and Rajasthan.
+            Explore our sustainable solutions in Coimbatore.
           </p>
 
           {/* Map Representation */}
           <div className="inline-flex gap-3 flex-wrap justify-center">
-            {['Bihar', 'Odisha', 'Jharkhand', 'Rajasthan'].map(state => (
+            {['Coimbatore'].map(state => (
               <span key={state} className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-sm border border-white/10 hover:bg-white/20 cursor-default transition-colors">
                 <MapPin size={14} className="text-saffron" /> {state}
               </span>

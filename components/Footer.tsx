@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { NAV_ITEMS } from '../constants';
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 import logoDark from '../logo/trust_darktheme_logo2.png';
 
@@ -21,22 +22,19 @@ const Footer: React.FC = () => {
             <p className="text-teal-100 text-sm leading-relaxed opacity-90">
               Building self-reliant communities across rural India through holistic education, healthcare, and livelihood programs.
             </p>
-            <div className="pt-4">
-              <span className="inline-block bg-white/10 px-3 py-1 rounded text-xs font-medium border border-white/20">
-                80G Certified | 12A Registered
-              </span>
-            </div>
           </div>
 
           {/* Quick Links */}
           <div>
             <h4 className="font-heading font-bold text-lg mb-6 text-saffron">Quick Links</h4>
             <ul className="space-y-3 text-sm text-teal-50">
-              <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
-              <li><Link to="/work" className="hover:text-white transition-colors">Our Programs</Link></li>
-              <li><Link to="/impact" className="hover:text-white transition-colors">Impact Stories</Link></li>
-              <li><Link to="/transparency" className="hover:text-white transition-colors">Financials</Link></li>
-              {/* <li><Link to="/donate" className="hover:text-white transition-colors">Donate Now</Link></li> */}
+              {NAV_ITEMS.map((item) => (
+                <li key={item.path}>
+                  <Link to={item.path} className="hover:text-white transition-colors">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 

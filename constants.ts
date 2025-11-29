@@ -4,6 +4,7 @@ import { StatProps, TeamMember, Program, Story } from './types';
 export const NAV_ITEMS = [
   { label: 'Home', path: '/' },
   { label: 'Our Work', path: '/work' },
+  { label: 'Impact Stories', path: '/impact' },
   { label: 'Get Involved', path: '/get-involved' },
   { label: 'About Us', path: '/about' },
 ];

@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Work from './pages/Work';
 import GetInvolved from './pages/GetInvolved';
+import Impact from './pages/Impact';
 // import Donate from './pages/Donate';
 
 // Scroll to top on route change
@@ -37,6 +38,7 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/impact" element={<Impact />} />
             <Route path="/work" element={<Work />} />
             <Route path="/get-involved" element={<GetInvolved />} />
             {/* <Route path="/donate" element={<Donate />} /> */}

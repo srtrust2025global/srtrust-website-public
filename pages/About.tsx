@@ -48,7 +48,7 @@ const About: React.FC = () => {
           <h2 className="font-heading font-bold text-3xl text-center text-charcoal dark:text-white mb-16">Our Journey</h2>
           <div className="space-y-12 relative before:absolute before:inset-0 before:ml-5 md:before:ml-0 md:before:-translate-x-px md:before:h-full md:before:w-0.5 md:before:bg-gradient-to-b md:before:from-transparent md:before:via-gray-200 dark:md:before:via-gray-700 md:before:to-transparent md:before:left-1/2">
             {[
-              { year: '2010', title: 'Inception', desc: 'Started with 1 small school in Bihar.' },
+              { year: '2010', title: 'Inception', desc: 'Started with 1 small school in Coimbatore.' },
               { year: '2015', title: 'Expansion', desc: 'Reached 50 villages with healthcare programs.' },
               { year: '2018', title: 'Livelihood Launch', desc: 'Initiated skill development for rural women.' },
               { year: '2023', title: 'Milestone', desc: 'Impacted over 100,000 lives across 3 states.' }
