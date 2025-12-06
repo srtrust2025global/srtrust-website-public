@@ -12,7 +12,7 @@ const Impact: React.FC = () => {
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {Array.from({ length: 6 }).map((_, i) => (
           <article key={i} className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-sm border border-gray-100 dark:border-gray-800">
-            <div className="mb-4 w-full h-44 bg-cover bg-center rounded" style={{ backgroundImage: `url(https://picsum.photos/800/400?random=${i + 30})` }} />
+            <div className="mb-4 w-full h-44 bg-cover bg-center rounded" style={{ backgroundImage: `url(/assets/impact-stories/story${i + 1}.svg)` }} />
             <h3 className="text-xl font-semibold mb-2">Community success story #{i + 1}</h3>
             <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">A short summary of how our program reached a village and improved school attendance, maternal health, or livelihoods. Replace these placeholders with real stories and media to share impact.</p>
           </article>

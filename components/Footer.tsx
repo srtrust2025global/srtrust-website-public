@@ -57,25 +57,47 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Newsletter */}
+          {/* Social Links */}
           <div>
-            <h4 className="font-heading font-bold text-lg mb-6 text-saffron">Stay Connected</h4>
-            <p className="text-sm text-teal-100 mb-4">Receive updates on our latest projects and impact.</p>
-            <form className="flex flex-col gap-2" onSubmit={(e) => e.preventDefault()}>
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="px-4 py-2 rounded bg-teal-800 dark:bg-teal/30 border border-teal-700 dark:border-teal/50 text-white placeholder-teal-300 dark:placeholder-gray-400 focus:outline-none focus:border-saffron text-sm"
-              />
-              <button className="bg-saffron hover:bg-[#E55A2B] text-white px-4 py-2 rounded font-medium text-sm transition-colors">
-                Subscribe
-              </button>
-            </form>
-            <div className="flex gap-4 mt-6">
-              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-saffron transition-colors"><Facebook size={18} /></a>
-              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-saffron transition-colors"><Twitter size={18} /></a>
-              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-saffron transition-colors"><Instagram size={18} /></a>
-              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-saffron transition-colors"><Linkedin size={18} /></a>
+            <h4 className="font-heading font-bold text-lg mb-6 text-saffron">Follow Us</h4>
+            <p className="text-sm text-teal-100 mb-4">Connect with us on social media</p>
+            <div className="flex items-center gap-4">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="p-3 bg-white/10 rounded-full hover:bg-saffron transition-colors"
+              >
+                <Facebook size={18} />
+              </a>
+              <a
+                href="https://twitter.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+                className="p-3 bg-white/10 rounded-full hover:bg-saffron transition-colors"
+              >
+                <Twitter size={18} />
+              </a>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="p-3 bg-white/10 rounded-full hover:bg-saffron transition-colors"
+              >
+                <Instagram size={18} />
+              </a>
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="p-3 bg-white/10 rounded-full hover:bg-saffron transition-colors"
+              >
+                <Linkedin size={18} />
+              </a>
             </div>
           </div>
         </div>

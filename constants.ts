@@ -1,5 +1,6 @@
-import { BookOpen, Heart, Users, Droplets } from 'lucide-react';
+import { BookOpen, Heart, Users, Droplets, UserSearch, Baby, Stethoscope, GraduationCap } from 'lucide-react';
 import { StatProps, TeamMember, Program, Story } from './types';
+
 
 export const NAV_ITEMS = [
   { label: 'Home', path: '/' },
@@ -10,29 +11,29 @@ export const NAV_ITEMS = [
 ];
 
 export const IMPACT_STATS: StatProps[] = [
-  { value: '150+', label: 'Villages Reached', icon: Users },
-  { value: '12,500', label: 'Children Educated', icon: BookOpen },
-  { value: '8,000', label: 'Women Empowered', icon: Heart },
-  { value: '500KL', label: 'Clean Water', icon: Droplets },
+  { value: '1,200+', label: 'Individuals screened', icon: Users },
+  { value: '300+', label: 'Children examined', icon: Baby  },
+  { value: '95+', label: 'Early-detection cases', icon: Stethoscope },
+  { value: '450+', label: 'Health education sessions', icon: BookOpen },
 ];
 
 export const TEAM_MEMBERS: TeamMember[] = [
   {
     name: "Dr. Anjali Deshmukh",
     role: "Founder & Managing Trustee",
-    image: "https://picsum.photos/200/200?random=10",
+    image: '/assets/trustees/anjali.svg',
     bio: "Former public health official with 25 years of experience in rural development."
   },
   {
     name: "Rajesh Kumar",
     role: "Director of Operations",
-    image: "https://picsum.photos/200/200?random=11",
+    image: '/assets/trustees/rajesh.svg',
     bio: "Civil engineer turned social entrepreneur, overseeing infrastructure projects."
   },
   {
     name: "Priya Singh",
     role: "Head of Education",
-    image: "https://picsum.photos/200/200?random=12",
+    image: '/assets/trustees/priya.svg',
     bio: "Education policy expert dedicated to bridging the digital divide."
   }
 ];
@@ -47,7 +48,7 @@ export const PROGRAMS: Program[] = [
       { label: 'Digital Labs', value: '12' },
       { label: 'Scholarships', value: '1,200' }
     ],
-    image: "https://picsum.photos/800/600?random=20"
+    image: '/assets/our-work/compassion_care.jpg'
   },
   {
     id: 'Clinical Excellence',
@@ -58,7 +59,7 @@ export const PROGRAMS: Program[] = [
       { label: 'Beneficiaries', value: '45,000' },
       { label: 'Water Units', value: '85' }
     ],
-    image: "https://picsum.photos/800/600?random=21"
+    image: '/assets/our-work/clinical_excelance.jpg'
   },
   {
     id: 'Patient Safety',
@@ -69,7 +70,7 @@ export const PROGRAMS: Program[] = [
       { label: 'SHGs Formed', value: '250' },
       { label: 'Jobs Created', value: '1,800' }
     ],
-    image: "https://picsum.photos/800/600?random=22"
+    image: '/assets/our-work/patient_safty.jpg'
   },
   {
     id: 'Trust and Integrity',
@@ -80,7 +81,7 @@ export const PROGRAMS: Program[] = [
       { label: 'Relief Kits', value: '10,000' },
       { label: 'Shelters Built', value: '200' }
     ],
-    image: "https://picsum.photos/800/600?random=23"
+    image: '/assets/our-work/trust_and_integrity.jpg'
   },
   {
     id: 'Accessibility and Affordability',
@@ -91,7 +92,7 @@ export const PROGRAMS: Program[] = [
       { label: 'Students', value: '2,500' },
       { label: 'Women Certified', value: '800' }
     ],
-    image: "https://picsum.photos/800/600?random=24"
+    image: '/assets/our-work/affordable.jpg'
   },
   {
     id: 'Continuous Support',
@@ -102,6 +103,6 @@ export const PROGRAMS: Program[] = [
       { label: 'Organic Acres', value: '500' },
       { label: 'Yield Increase', value: '30%' }
     ],
-    image: "https://picsum.photos/800/600?random=25"
+    image: '/assets/our-work/contiuous.jpg'
   }
 ];

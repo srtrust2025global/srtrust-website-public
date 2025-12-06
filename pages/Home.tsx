@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ArrowRight, CheckCircle, ShieldCheck } from 'lucide-react';
 import { IMPACT_STATS, PROGRAMS } from '../constants';
@@ -6,13 +6,33 @@ import { IMPACT_STATS, PROGRAMS } from '../constants';
 const Home: React.FC = () => {
   const navigate = useNavigate();
 
+  const heroBackground = useMemo(() => {
+    const imgs = [
+      '/assets/backgrounds/bg1.jpg',
+      '/assets/backgrounds/bg2.jpg',
+      '/assets/backgrounds/bg3.jpg',
+      '/assets/backgrounds/bg4.jpg',
+      '/assets/backgrounds/bg5.jpg',
+      '/assets/backgrounds/bg6.jpg',
+      '/assets/backgrounds/bg7.jpg',
+      '/assets/backgrounds/bg8.jpg',
+      '/assets/backgrounds/bg9.jpg',
+      '/assets/backgrounds/bg10.jpg',
+      '/assets/backgrounds/bg11.jpg',
+      '/assets/backgrounds/bg12.jpg',
+      '/assets/backgrounds/bg13.jpg',
+      '/assets/backgrounds/bg14.jpg',
+    ];
+    return imgs[Math.floor(Math.random() * imgs.length)];
+  }, []);
+
   return (
     <div className="animate-fade-in">
       {/* Hero Section */}
       <section className="relative h-[85vh] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url("https://picsum.photos/1920/1080?random=1")' }}
+          style={{ backgroundImage: `url("${heroBackground}")` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-teal/90 to-teal/40 mix-blend-multiply"></div>
         </div>
