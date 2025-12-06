@@ -34,18 +34,36 @@ const Navbar: React.FC = () => {
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
-            {NAV_ITEMS.map((item) => (
-              <NavLink
-                key={item.path}
-                to={item.path}
-                className={({ isActive }) =>
-                  `text-sm font-medium transition-colors duration-200 ${isActive ? 'text-saffron font-bold' : 'text-charcoal dark:text-gray-200 hover:text-saffron'
-                  }`
-                }
-              >
-                {item.label}
-              </NavLink>
-            ))}
+            {NAV_ITEMS.map((item) => {
+              if (item.path === '/get-involved') {
+                return (
+                  <React.Fragment key={item.path}>
+                    {/* Get Involved link intentionally commented out:
+                    <NavLink
+                      to={item.path}
+                      className={({ isActive }) =>
+                        `text-sm font-medium transition-colors duration-200 ${isActive ? 'text-saffron font-bold' : 'text-charcoal dark:text-gray-200 hover:text-saffron'}`
+                      }
+                    >
+                      {item.label}
+                    </NavLink>
+                    */}
+                  </React.Fragment>
+                );
+              }
+
+              return (
+                <NavLink
+                  key={item.path}
+                  to={item.path}
+                  className={({ isActive }) =>
+                    `text-sm font-medium transition-colors duration-200 ${isActive ? 'text-saffron font-bold' : 'text-charcoal dark:text-gray-200 hover:text-saffron'}`
+                  }
+                >
+                  {item.label}
+                </NavLink>
+              );
+            })}
             {/* <button
               onClick={handleDonateClick}
               className="bg-saffron hover:bg-[#E55A2B] text-white px-6 py-2.5 rounded-full font-bold text-sm transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
@@ -77,19 +95,38 @@ const Navbar: React.FC = () => {
       {isOpen && (
         <div className="md:hidden bg-white dark:bg-coffee absolute w-full shadow-xl">
           <div className="px-4 pt-2 pb-6 space-y-2">
-            {NAV_ITEMS.map((item) => (
-              <NavLink
-                key={item.path}
-                to={item.path}
-                onClick={() => setIsOpen(false)}
-                className={({ isActive }) =>
-                  `block px-3 py-3 rounded-md text-base font-medium ${isActive ? 'bg-orange-50 dark:bg-gray-800 text-saffron' : 'text-charcoal dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800'
-                  }`
-                }
-              >
-                {item.label}
-              </NavLink>
-            ))}
+            {NAV_ITEMS.map((item) => {
+              if (item.path === '/get-involved') {
+                return (
+                  <div key={item.path}>
+                    {/* Get Involved mobile link commented out:
+                    <NavLink
+                      to={item.path}
+                      onClick={() => setIsOpen(false)}
+                      className={({ isActive }) =>
+                        `block px-3 py-3 rounded-md text-base font-medium ${isActive ? 'bg-orange-50 dark:bg-gray-800 text-saffron' : 'text-charcoal dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800'}`
+                      }
+                    >
+                      {item.label}
+                    </NavLink>
+                    */}
+                  </div>
+                );
+              }
+
+              return (
+                <NavLink
+                  key={item.path}
+                  to={item.path}
+                  onClick={() => setIsOpen(false)}
+                  className={({ isActive }) =>
+                    `block px-3 py-3 rounded-md text-base font-medium ${isActive ? 'bg-orange-50 dark:bg-gray-800 text-saffron' : 'text-charcoal dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800'}`
+                  }
+                >
+                  {item.label}
+                </NavLink>
+              );
+            })}
             <div className="pt-4">
               {/* <button
                 onClick={handleDonateClick}

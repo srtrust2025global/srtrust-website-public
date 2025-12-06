@@ -28,13 +28,27 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-heading font-bold text-lg mb-6 text-saffron">Quick Links</h4>
             <ul className="space-y-3 text-sm text-teal-50">
-              {NAV_ITEMS.map((item) => (
-                <li key={item.path}>
-                  <Link to={item.path} className="hover:text-white transition-colors">
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
+              {NAV_ITEMS.map((item) => {
+                if (item.path === '/get-involved') {
+                  return (
+                    <li key={item.path}>
+                      {/* Get Involved link commented out
+                      <Link to={item.path} className="hover:text-white transition-colors">
+                        {item.label}
+                      </Link>
+                      */}
+                    </li>
+                  );
+                }
+
+                return (
+                  <li key={item.path}>
+                    <Link to={item.path} className="hover:text-white transition-colors">
+                      {item.label}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
