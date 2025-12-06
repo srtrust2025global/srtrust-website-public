@@ -6,8 +6,7 @@ import logoDark from '../logo/trust_darktheme_logo2.png';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-teal dark:bg-coffee text-white transition-colors duration-300" style={{ paddingTop: '12px', paddingBottom: '12px' }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-teal dark:bg-coffee text-white pt-16 pb-8 transition-colors duration-300">      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 items-start">
 
           {/* Brand & Mission */}
