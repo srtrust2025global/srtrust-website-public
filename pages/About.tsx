@@ -32,8 +32,8 @@ const About: React.FC = () => {
             </p>
           </div>
           <div className="bg-white dark:bg-charcoal p-8 rounded-xl shadow-lg border-t-4 border-teal transition-colors duration-300">
-            <div className="bg-teal-50 dark:bg-gray-800 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-              <Eye className="text-teal dark:text-saffron" size={24} />
+            <div className="bg-orange-50 dark:bg-gray-800 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+              <Eye className="text-saffron" size={24} />
             </div>
             <h3 className="font-heading font-bold text-xl mb-3 dark:text-white">Our Vision</h3>
             <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
@@ -46,7 +46,7 @@ const About: React.FC = () => {
             </p>
           </div>
           <div className="bg-white dark:bg-charcoal p-8 rounded-xl shadow-lg border-t-4 border-terracotta transition-colors duration-300">
-            <div className="bg-red-50 dark:bg-gray-800 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+            <div className="bg-orange-50 dark:bg-gray-800 w-12 h-12 rounded-full flex items-center justify-center mb-4">
               <Heart className="text-terracotta" size={24} />
             </div>
             <h3 className="font-heading font-bold text-xl mb-3 dark:text-white">Our Values</h3>
@@ -74,71 +74,66 @@ const About: React.FC = () => {
       <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-200 dark:bg-gray-700 transform -translate-x-1/2" />
 
       <div className="space-y-1">
-        {[
-          { title: 'Compassion', desc: 'We care deeply for our patients, showing empathy, kindness, and respect in every interaction.', emoji: '❤️' },
-          { title: 'Integrity', desc: 'We act with honesty, transparency, and accountability, earning the trust of our patients and communities.', emoji: '🛡️' },
-          { title: 'Excellence', desc: 'We strive for the highest standards in clinical care, service delivery, and patient safety.', emoji: '⭐' },
-          { title: 'Respect', desc: 'We honor the dignity, diversity, and rights of every individual we serve and employ.', emoji: '🤝' },
-          { title: 'Collaboration', desc: 'We work as a unified team—patients, families, staff, and partners—to improve health outcomes together.', emoji: '👥' },
-          { title: 'Innovation', desc: 'We embrace new ideas, technologies, and approaches to continually advance healthcare quality.', emoji: '⚡' },
-          { title: 'Equity', desc: 'We ensure fair, inclusive, and accessible healthcare for all, especially underserved and vulnerable populations.', emoji: '⚖️' }
-        ].map((item, idx) => {
-          const isLeft = idx % 2 === 0;
-          const gradients = [
-            'from-saffron to-teal',
-            'from-teal to-terracotta',
-            'from-terracotta to-indigo-400',
-            'from-indigo-400 to-green-500',
-            'from-green-500 to-pink-500',
-            'from-pink-500 to-yellow-400',
-            'from-yellow-400 to-saffron'
-          ];
-          const gradient = gradients[idx % gradients.length];
+            {[
+              { title: 'Compassion', desc: 'We care deeply for our patients, showing empathy, kindness, and respect in every interaction.', emoji: '❤️' },
+              { title: 'Integrity', desc: 'We act with honesty, transparency, and accountability, earning the trust of our patients and communities.', emoji: '🛡️' },
+              { title: 'Excellence', desc: 'We strive for the highest standards in clinical care, service delivery, and patient safety.', emoji: '⭐' },
+              { title: 'Respect', desc: 'We honor the dignity, diversity, and rights of every individual we serve and employ.', emoji: '🤝' },
+              { title: 'Collaboration', desc: 'We work as a unified team—patients, families, staff, and partners—to improve health outcomes together.', emoji: '👥' },
+              { title: 'Innovation', desc: 'We embrace new ideas, technologies, and approaches to continually advance healthcare quality.', emoji: '⚡' },
+              { title: 'Equity', desc: 'We ensure fair, inclusive, and accessible healthcare for all, especially underserved and vulnerable populations.', emoji: '⚖️' }
+            ].map((item, idx) => {
+              const isLeft = idx % 2 === 0;
+              const gradients = [
+                'from-saffron to-teal',
+                'from-teal to-terracotta',
+                'from-terracotta to-indigo-400',
+                'from-indigo-400 to-green-500',
+                'from-green-500 to-pink-500',
+                'from-pink-500 to-yellow-400',
+                'from-yellow-400 to-saffron'
+              ];
+              const gradient = gradients[idx % gradients.length];
 
-          return (
-            <div key={idx} className="relative md:flex md:items-center">
+              return (
+                <div key={idx} className="relative md:flex md:items-start md:justify-between md:gap-8">
 
-              {/* LEFT BOX */}
-              <div className="md:w-1/2 p-1 md:px-9 md:flex md:justify-end">
-                {isLeft && (
-                  <div className="w-full md:max-w-lg">
-                    <div className="bg-white/70 dark:bg-charcoal/60 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-800 md:text-right">
-                      <h3 className="font-bold text-xl text-charcoal dark:text-white">{idx + 1}. {item.title}</h3>
-                      <p className="mt-3 text-sm text-gray-700 dark:text-gray-300">{item.desc}</p>
+                  {/* LEFT BOX */}
+                  <div className="md:w-1/2 flex md:justify-end">
+                    {isLeft && (
+                      <div className="w-full md:max-w-md">
+                        <div className="mx-auto bg-white/70 dark:bg-charcoal/60 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-800 text-center">
+                          <h3 className="font-bold text-xl text-charcoal dark:text-white">{idx + 1}. {item.title}</h3>
+                          <p className="mt-3 text-sm text-gray-700 dark:text-gray-300">{item.desc}</p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* CENTER EMOJI */}
+                  <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 md:static md:transform-none md:flex md:items-center md:justify-center md:w-0">
+                    <div className={`p-0.5 rounded-full bg-gradient-to-tr ${gradient} shadow-xl`}>
+                      <div className="w-16 h-16 rounded-full bg-white dark:bg-charcoal flex items-center justify-center">
+                        <span className="text-2xl">{item.emoji}</span>
+                      </div>
                     </div>
                   </div>
-                )}
-              </div>
 
-              {/* CENTER EMOJI */}
-              <div className="
-                absolute left-1/2 top-1/2 
-                transform -translate-x-1/2 -translate-y-1/2 
-                md:static md:transform-none 
-                md:flex md:items-center md:justify-center md:w-0
-              ">
-                <div className={`p-0.5 rounded-full bg-gradient-to-tr ${gradient} shadow-xl`}>
-                  <div className="w-16 h-16 rounded-full bg-white dark:bg-charcoal flex items-center justify-center">
-                    <span className="text-2xl">{item.emoji}</span>
+                  {/* RIGHT BOX */}
+                  <div className="md:w-1/2 flex md:justify-start">
+                    {!isLeft && (
+                      <div className="w-full md:max-w-md">
+                        <div className="mx-auto bg-white/70 dark:bg-charcoal/60 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-800 text-center">
+                          <h3 className="font-bold text-xl text-charcoal dark:text-white">{idx + 1}. {item.title}</h3>
+                          <p className="mt-3 text-sm text-gray-700 dark:text-gray-300">{item.desc}</p>
+                        </div>
+                      </div>
+                    )}
                   </div>
+
                 </div>
-              </div>
-
-              {/* RIGHT BOX */}
-              <div className="md:w-1/2 p-1 md:px-9 md:flex md:justify-start">
-                {!isLeft && (
-                  <div className="w-full md:max-w-lg">
-                    <div className="bg-white/70 dark:bg-charcoal/60 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-800 md:text-left">
-                      <h3 className="font-bold text-xl text-charcoal dark:text-white">{idx + 1}. {item.title}</h3>
-                      <p className="mt-3 text-sm text-gray-700 dark:text-gray-300">{item.desc}</p>
-                    </div>
-                  </div>
-                )}
-              </div>
-
-            </div>
-          );
-        })}
+              );
+            })}
       </div>
     </div>
   </div>

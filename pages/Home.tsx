@@ -46,7 +46,7 @@ const Home: React.FC = () => {
             Delivering Hope, Healing, and High-Quality Care <br className="hidden md:block" /> Across All Health Needs.
           </h1>
           <p className="font-sans text-lg md:text-xl text-gray-100 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Where your contribution becomes lasting change in health, and livelihood.
+            Where your contribution becomes lasting change in health and livelihood.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             {/* <button
