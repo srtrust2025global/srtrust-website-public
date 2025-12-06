@@ -23,21 +23,40 @@ const About: React.FC = () => {
               <Target className="text-saffron" size={24} />
             </div>
             <h3 className="font-heading font-bold text-xl mb-3 dark:text-white">Our Mission</h3>
-            <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">To empower marginalized communities through scalable programs in education, healthcare, and sustainable livelihoods.</p>
+            <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+              •	To provide high-quality, safe, and affordable healthcare services through skilled professionals, advanced technology, and a culture of continuous improvement.
+            </p>
+
+            <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mt-2">
+            	•	To uphold dignity, respect, and empathy in every patient interaction.
+            </p>
           </div>
           <div className="bg-white dark:bg-charcoal p-8 rounded-xl shadow-lg border-t-4 border-teal transition-colors duration-300">
             <div className="bg-teal-50 dark:bg-gray-800 w-12 h-12 rounded-full flex items-center justify-center mb-4">
               <Eye className="text-teal dark:text-saffron" size={24} />
             </div>
             <h3 className="font-heading font-bold text-xl mb-3 dark:text-white">Our Vision</h3>
-            <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">A self-reliant rural India where every child learns, every family is healthy, and every youth is skilled.</p>
+            <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+              • To be a trusted leader in compassionate, patient-centered healthcare, delivering excellence,
+              innovation, and equitable access for every community we serve.
+            </p>
+
+            <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mt-2">
+              • To promote community well-being through prevention, education, and accessible health services.
+            </p>
           </div>
           <div className="bg-white dark:bg-charcoal p-8 rounded-xl shadow-lg border-t-4 border-terracotta transition-colors duration-300">
             <div className="bg-red-50 dark:bg-gray-800 w-12 h-12 rounded-full flex items-center justify-center mb-4">
               <Heart className="text-terracotta" size={24} />
             </div>
             <h3 className="font-heading font-bold text-xl mb-3 dark:text-white">Our Values</h3>
-            <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Integrity, Transparency, Empathy, and Community-First Action in everything we do.</p>
+            <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+              • We uphold honesty, ethical practices, and accountability in every decision, ensuring trust with patients, families, and communities.
+            </p>
+
+            <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mt-2">
+              • We work together with empathy and respect, fostering a supportive environment where every individual is treated with care and understanding.
+            </p>
           </div>
         </div>
       </section>
