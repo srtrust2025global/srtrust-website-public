@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { PROGRAMS } from '../constants';
+// PROGRAMS replaced by OUR_WORK_ITEMS below
 import { MapPin, BarChart3, X, ArrowRight, ExternalLink } from 'lucide-react';
 
 const Work: React.FC = () => {
   const [selectedProgramId, setSelectedProgramId] = useState<string | null>(null);
 
-  const selectedProgram = PROGRAMS.find(p => p.id === selectedProgramId);
+  // selectedProgram will be resolved after OUR_WORK_ITEMS is defined
 
   const openModal = (id: string) => {
     setSelectedProgramId(id);
@@ -16,6 +16,53 @@ const Work: React.FC = () => {
     setSelectedProgramId(null);
     document.body.style.overflow = 'auto'; // Restore scrolling
   };
+
+  const OUR_WORK_ITEMS = [
+    {
+      id: 'mental-health',
+      title: 'Mental Health Screening',
+      description:
+        'We conducted private mental health assessments to identify emotional and psychological challenges early. These screenings ensured community members received confidential, stigma-free support.',
+      image: '/assets/our-work/mental-health.svg',
+    },
+    {
+      id: 'emotional-support',
+      title: 'Emotional Support Sessions',
+      description:
+        'Our team offered one-on-one emotional support to individuals facing stress, anxiety, or personal struggles. Each session provided a safe space for expression, reassurance, and immediate coping guidance.',
+      image: '/assets/our-work/emotional-support.svg',
+    },
+    {
+      id: 'counseling',
+      title: 'Counseling & Follow-Up Care',
+      description:
+        'We connected individuals to ongoing counseling services for continued healing and long-term mental wellness. This ensured no one was left behind and that every identified need received sustained professional attention.',
+      image: '/assets/our-work/counseling.svg',
+    },
+    {
+      id: 'screenings',
+      title: 'Comprehensive Health Screenings',
+      description:
+        'We conducted wide-range medical screenings to detect chronic and emerging conditions at an early stage. This allowed individuals to understand their health needs and take timely preventive steps.',
+      image: '/assets/our-work/screenings.svg',
+    },
+    {
+      id: 'child-checkups',
+      title: 'Child Health & Development Checkups',
+      description:
+        'Specialized examinations ensured that children were assessed for nutrition, growth milestones, and general well-being. Parents received clarity, awareness, and recommendations to support their child’s healthy development.',
+      image: '/assets/our-work/child-checkups.svg',
+    },
+    {
+      id: 'medicines-education',
+      title: 'Free Medicine Distribution & Health Education',
+      description:
+        'Essential medicines were provided free to community members, removing cost barriers to treatment. Along with this, health education sessions empowered families with knowledge for long-term wellness.',
+      image: '/assets/our-work/medicines-education.svg',
+    },
+  ];
+
+  const selectedProgram = selectedProgramId ? OUR_WORK_ITEMS.find(p => p.id === selectedProgramId) : null;
 
   return (
     <div className="animate-fade-in bg-gray-50 dark:bg-coffee min-h-screen pb-20 transition-colors duration-300">
@@ -41,10 +88,10 @@ const Work: React.FC = () => {
         </div>
       </section>
 
-      {/* Gallery Grid */}
+      {/* Gallery Grid (showing Our Work items) */}
       <section className="max-w-7xl mx-auto px-4 -mt-16 relative z-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {PROGRAMS.map(program => (
+          {OUR_WORK_ITEMS.map(program => (
             <div
               key={program.id}
               onClick={() => openModal(program.id)}
@@ -73,6 +120,8 @@ const Work: React.FC = () => {
           ))}
         </div>
       </section>
+
+      
 
       {/* Detail Modal */}
       {selectedProgram && (
@@ -139,17 +188,19 @@ const Work: React.FC = () => {
 
                   {/* Sidebar Stats */}
                   <div className="lg:w-1/3 space-y-6">
-                    <div className="bg-charcoal text-white p-8 rounded-2xl shadow-lg">
-                      <h3 className="font-bold text-xl mb-6 border-b border-white/20 pb-4">Key Impact Metrics</h3>
-                      <div className="space-y-6">
-                        {selectedProgram.stats.map((stat, idx) => (
-                          <div key={idx}>
-                            <div className="font-stats font-bold text-4xl text-saffron mb-1">{stat.value}</div>
-                            <div className="text-sm text-gray-400 uppercase tracking-wider font-medium">{stat.label}</div>
-                          </div>
-                        ))}
+                    {selectedProgram && (selectedProgram as any).stats && (selectedProgram as any).stats.length > 0 && (
+                      <div className="bg-charcoal text-white p-8 rounded-2xl shadow-lg">
+                        <h3 className="font-bold text-xl mb-6 border-b border-white/20 pb-4">Key Impact Metrics</h3>
+                        <div className="space-y-6">
+                          {(selectedProgram as any).stats.map((stat: any, idx: number) => (
+                            <div key={idx}>
+                              <div className="font-stats font-bold text-4xl text-saffron mb-1">{stat.value}</div>
+                              <div className="text-sm text-gray-400 uppercase tracking-wider font-medium">{stat.label}</div>
+                            </div>
+                          ))}
+                        </div>
                       </div>
-                    </div>
+                    )}
 
                     <div className="bg-teal/10 dark:bg-saffron/10 p-6 rounded-2xl border border-teal/20 dark:border-saffron/20">
                       <h4 className="font-bold text-teal dark:text-saffron mb-2 flex items-center gap-2">
