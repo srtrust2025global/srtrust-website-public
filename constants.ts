@@ -39,9 +39,9 @@ export const TEAM_MEMBERS: TeamMember[] = [
 
 export const PROGRAMS: Program[] = [
   {
-    id: 'shiksha',
-    title: 'Shiksha (Education)',
-    description: 'Empowering the next generation through digital literacy labs, scholarship programs, and school infrastructure upgrades.',
+    id: 'Compassionate Care',
+    title: 'Compassionate Care',
+    description: 'We treat every patient with empathy, respect, and dignity.',
     stats: [
       { label: 'Schools Upgraded', value: '45' },
       { label: 'Digital Labs', value: '12' },
@@ -50,9 +50,9 @@ export const PROGRAMS: Program[] = [
     image: "https://picsum.photos/800/600?random=20"
   },
   {
-    id: 'swasthya',
-    title: 'Swasthya (Healthcare)',
-    description: 'Bringing essential healthcare to doorsteps through mobile clinics, sanitation drives, and clean water installations.',
+    id: 'Clinical Excellence',
+    title: 'Clinical Excellence',
+    description: 'We follow evidence-based practices, advanced medical technology, and skilled professionals.',
     stats: [
       { label: 'Health Camps', value: '120' },
       { label: 'Beneficiaries', value: '45,000' },
@@ -61,9 +61,9 @@ export const PROGRAMS: Program[] = [
     image: "https://picsum.photos/800/600?random=21"
   },
   {
-    id: 'aatmanirbharta',
-    title: 'Aatmanirbharta (Livelihood)',
-    description: 'Creating self-reliant communities through vocational training, Self Help Groups (SHGs), and market linkage.',
+    id: 'Patient Safety',
+    title: 'Patient Safety',
+    description: 'We ensure the highest standards of hygiene, transparency, and ethical care.',
     stats: [
       { label: 'Women Trained', value: '3,500' },
       { label: 'SHGs Formed', value: '250' },
@@ -72,9 +72,9 @@ export const PROGRAMS: Program[] = [
     image: "https://picsum.photos/800/600?random=22"
   },
   {
-    id: 'rahat',
-    title: 'Rahat (Disaster Relief)',
-    description: 'Providing immediate emergency response and long-term rehabilitation support to communities affected by natural disasters.',
+    id: 'Trust and Integrity',
+    title: 'Trust and Integrity',
+    description: 'Honesty, ethical practices, and patient-first decisions guide everything we do.',
     stats: [
       { label: 'Families Aided', value: '5,000' },
       { label: 'Relief Kits', value: '10,000' },
@@ -83,9 +83,9 @@ export const PROGRAMS: Program[] = [
     image: "https://picsum.photos/800/600?random=23"
   },
   {
-    id: 'digital-sakshar',
-    title: 'Digital Sakshar (Literacy)',
-    description: 'Bridging the digital divide by providing computer education and internet access to rural youth and women.',
+    id: 'Accessibility and Affordability',
+    title: 'Accessibility and Affordability',
+    description: 'Quality healthcare should be reachable and affordable for everyone.',
     stats: [
       { label: 'Centers', value: '25' },
       { label: 'Students', value: '2,500' },
@@ -94,9 +94,9 @@ export const PROGRAMS: Program[] = [
     image: "https://picsum.photos/800/600?random=24"
   },
   {
-    id: 'kisan-shakti',
-    title: 'Kisan Shakti (Agriculture)',
-    description: 'Promoting sustainable farming practices, organic cultivation, and modern irrigation techniques among small farmers.',
+    id: 'Continuous Support',
+    title: 'Continuous Support',
+    description: 'Comprehensive guidance—from consultation to recovery, including IVF journeys.',
     stats: [
       { label: 'Farmers Trained', value: '1,500' },
       { label: 'Organic Acres', value: '500' },

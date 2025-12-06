@@ -23,10 +23,10 @@ const Home: React.FC = () => {
             <span className="text-xs font-bold tracking-wider uppercase">80G Certified & 12A Registered</span>
           </div>
           <h1 className="font-heading font-bold text-4xl md:text-6xl lg:text-7xl leading-tight mb-6 shadow-sm">
-            Building Self-Reliant Communities <br className="hidden md:block" /> Across Rural India
+            Delivering Hope, Healing, and High-Quality Care <br className="hidden md:block" /> Across All Health Needs.
           </h1>
           <p className="font-sans text-lg md:text-xl text-gray-100 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Where your contribution becomes lasting change. Join us in empowering 100+ villages through education, health, and livelihood.
+            Where your contribution becomes lasting change in health, and livelihood.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             {/* <button
@@ -66,7 +66,7 @@ const Home: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal dark:text-white mb-4">Our Core Pillars</h2>
             <div className="w-16 h-1 bg-saffron mx-auto rounded-full"></div>
-            <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">We believe in a holistic approach to development, focusing on three interconnected areas essential for sustainable growth.</p>
+            <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">a commitment to clinical excellence, strict patient safety, compassionate care, unwavering trust and integrity, accessible and affordable services, and continuous support throughout every stage of the patient journey.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

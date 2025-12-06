@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
               {/* <h3 className="font-heading font-bold text-xl">SR TRUST</h3> */}
             </div>
             <p className="text-teal-100 text-sm leading-relaxed opacity-90">
-              Building self-reliant communities across rural India through holistic education, healthcare, and livelihood programs.
+              Empowering patients with compassionate support every step of the way.
             </p>
           </div>
 
@@ -48,11 +48,11 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} />
-                <span>+91 98765 43210</span>
+                <span>+91 88075 29091</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} />
-                <span>hello@srtrust.org</span>
+                <span>care@srtrustglobal.com</span>
               </li>
             </ul>
           </div>
