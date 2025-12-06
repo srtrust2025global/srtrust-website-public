@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { ArrowRight, CheckCircle, ShieldCheck } from 'lucide-react';
 import { IMPACT_STATS, PROGRAMS } from '../constants';
 
@@ -98,9 +98,7 @@ const Home: React.FC = () => {
                 <div className="p-8">
                   <h3 className="font-heading font-bold text-2xl text-teal dark:text-saffron mb-3">{program.title}</h3>
                   <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed line-clamp-3">{program.description}</p>
-                  <Link to="/work" className="inline-flex items-center font-bold text-saffron hover:text-[#E55A2B] tracking-wide text-sm uppercase">
-                    Learn More <ArrowRight size={16} className="ml-1" />
-                  </Link>
+                  {/* Learn More CTA removed per request */}
                 </div>
               </div>
             ))}
