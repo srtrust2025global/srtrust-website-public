@@ -48,7 +48,7 @@ export const PROGRAMS: Program[] = [
       { label: 'Digital Labs', value: '12' },
       { label: 'Scholarships', value: '1,200' }
     ],
-    image: '/assets/our-work/compassion_care.jpg'
+    image: '/assets/core-pillers/compassion_care.jpg'
   },
   {
     id: 'Clinical Excellence',
@@ -59,7 +59,7 @@ export const PROGRAMS: Program[] = [
       { label: 'Beneficiaries', value: '45,000' },
       { label: 'Water Units', value: '85' }
     ],
-    image: '/assets/our-work/clinical_excelance.jpg'
+    image: '/assets/core-pillers/clinical_excelance.jpg'
   },
   {
     id: 'Patient Safety',
@@ -70,7 +70,7 @@ export const PROGRAMS: Program[] = [
       { label: 'SHGs Formed', value: '250' },
       { label: 'Jobs Created', value: '1,800' }
     ],
-    image: '/assets/our-work/patient_safty.jpg'
+    image: '/assets/core-pillers/patient_safty.jpg'
   },
   {
     id: 'Trust and Integrity',
@@ -81,7 +81,7 @@ export const PROGRAMS: Program[] = [
       { label: 'Relief Kits', value: '10,000' },
       { label: 'Shelters Built', value: '200' }
     ],
-    image: '/assets/our-work/trust_and_integrity.jpg'
+    image: '/assets/core-pillers/trust_and_integrity.jpg'
   },
   {
     id: 'Accessibility and Affordability',
@@ -92,7 +92,7 @@ export const PROGRAMS: Program[] = [
       { label: 'Students', value: '2,500' },
       { label: 'Women Certified', value: '800' }
     ],
-    image: '/assets/our-work/affordable.jpg'
+    image: '/assets/core-pillers/affordable.jpg'
   },
   {
     id: 'Continuous Support',
@@ -103,6 +103,6 @@ export const PROGRAMS: Program[] = [
       { label: 'Organic Acres', value: '500' },
       { label: 'Yield Increase', value: '30%' }
     ],
-    image: '/assets/our-work/contiuous.jpg'
+    image: '/assets/core-pillers/contiuous.jpg'
   }
 ];
