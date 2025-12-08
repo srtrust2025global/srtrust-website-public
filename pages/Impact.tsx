@@ -36,7 +36,7 @@ const Impact: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 h-full flex flex-col justify-center items-center text-center">
           <h1 className="font-heading font-bold text-3xl md:text-5xl">Impact Stories</h1>
-          <p className="mt-3 text-md md:text-lg text-gray-100 max-w-3xl">Real lives changed — read first-hand accounts from our programs and beneficiaries across education, healthcare and livelihoods.</p>
+          <p className="mt-3 text-base md:text-lg text-gray-100 max-w-3xl">Real lives changed — read first-hand accounts from our programs and beneficiaries across education, healthcare and livelihoods.</p>
         </div>
       </section>
 

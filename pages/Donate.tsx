@@ -154,8 +154,8 @@ const Donate: React.FC = () => {
           <div className="bg-white p-6 rounded-xl shadow border border-gray-100">
             <h4 className="font-bold text-charcoal mb-2">Need Help?</h4>
             <p className="text-sm text-gray-600 mb-4">Contact our donor support team.</p>
-            <p className="font-bold text-saffron">+91 98765 43210</p>
-            <p className="text-sm text-gray-500">support@udayasankalp.org</p>
+            <p className="font-bold text-saffron">+91 88075 29091</p>
+            <p className="text-sm text-gray-500">care@srtrustglobal.com</p>
           </div>
         </div>
 

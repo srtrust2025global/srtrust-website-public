@@ -21,7 +21,7 @@ const Work: React.FC = () => {
     {
       title: 'Comprehensive Health Screenings',
       image: '/assets/our-work/screenings.jpg',
-      text: 'We carried out wide-range medical screenings to detect chronic and emerging health conditions early. This helped individuals understand their health needs and take preventive action at the right time.'
+      text: 'We carried out wide-ranging medical screenings to detect chronic and emerging health conditions early. This helped individuals understand their health needs and take preventive action at the right time.'
     },
     {
       title: 'Child Health & Development Checkups',
@@ -45,7 +45,7 @@ const Work: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
           <h1 className="font-heading font-bold text-5xl md:text-7xl mb-6">Our Impact Gallery</h1>
           <p className="text-gray-300 max-w-2xl mx-auto mb-10 text-lg">
-            Explore our sustainable solutions Now in Coimbatore.
+            Explore our sustainable solutions now in Coimbatore.
           </p>
 
           {/* Map Representation */}

@@ -86,7 +86,7 @@ const Home: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal dark:text-white mb-4">Our Core Pillars</h2>
             <div className="w-16 h-1 bg-saffron mx-auto rounded-full"></div>
-            <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">a commitment to clinical excellence, strict patient safety, compassionate care, unwavering trust and integrity, accessible and affordable services, and continuous support throughout every stage of the patient journey.</p>
+            <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">A commitment to clinical excellence, strict patient safety, compassionate care, unwavering trust and integrity, accessible and affordable services, and continuous support throughout every stage of the patient journey.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

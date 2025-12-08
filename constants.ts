@@ -53,7 +53,7 @@ export const PROGRAMS: Program[] = [
   {
     id: 'Clinical Excellence',
     title: 'Clinical Excellence',
-    description: 'We follow evidence-based practices, advanced medical technology, and skilled professionals.',
+      description: 'We follow evidence-based practices, use advanced medical technology, and employ skilled professionals.',
     stats: [
       { label: 'Health Camps', value: '120' },
       { label: 'Beneficiaries', value: '45,000' },
@@ -70,7 +70,7 @@ export const PROGRAMS: Program[] = [
       { label: 'SHGs Formed', value: '250' },
       { label: 'Jobs Created', value: '1,800' }
     ],
-    image: '/assets/core-pillers/patient_safty.jpg'
+      image: '/assets/core-pillers/patient_safty.jpg'
   },
   {
     id: 'Trust and Integrity',
@@ -103,6 +103,6 @@ export const PROGRAMS: Program[] = [
       { label: 'Organic Acres', value: '500' },
       { label: 'Yield Increase', value: '30%' }
     ],
-    image: '/assets/core-pillers/contiuous.jpg'
+      image: '/assets/core-pillers/contiuous.jpg'
   }
 ];
