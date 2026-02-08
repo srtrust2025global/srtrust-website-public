@@ -22,13 +22,8 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between h-20">
           <div className="flex items-center cursor-pointer" onClick={() => navigate('/')}>
             <div className="flex-shrink-0 flex items-center gap-2">
-              {/* <div className="bg-saffron p-2 rounded-full text-white">
-                <TreeDeciduous size={20} fill="white" />
-              </div> */}
               <img src={theme === 'dark' ? logoDark : logoLight} alt="SR Trust Logo" className="h-16 w-auto" />
               <div>
-                {/* <span className="font-heading font-bold text-xl text-teal tracking-tight block">SR TRUST</span>
-                <span className="text-[10px] text-charcoal tracking-widest uppercase block">A PROMISE OF NEW BEGINNINGS</span> */}
               </div>
             </div>
           </div>
@@ -36,20 +31,7 @@ const Navbar: React.FC = () => {
           <div className="hidden md:flex items-center space-x-8">
             {NAV_ITEMS.map((item) => {
               if (item.path === '/get-involved') {
-                return (
-                  <React.Fragment key={item.path}>
-                    {/* Get Involved link intentionally commented out:
-                    <NavLink
-                      to={item.path}
-                      className={({ isActive }) =>
-                        `text-sm font-medium transition-colors duration-200 ${isActive ? 'text-saffron font-bold' : 'text-charcoal dark:text-gray-200 hover:text-saffron'}`
-                      }
-                    >
-                      {item.label}
-                    </NavLink>
-                    */}
-                  </React.Fragment>
-                );
+                return null;
               }
 
               return (
@@ -64,12 +46,6 @@ const Navbar: React.FC = () => {
                 </NavLink>
               );
             })}
-            {/* <button
-              onClick={handleDonateClick}
-              className="bg-saffron hover:bg-[#E55A2B] text-white px-6 py-2.5 rounded-full font-bold text-sm transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
-            >
-              Donate Now
-            </button> */}
             <button
               onClick={toggleTheme}
               className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
@@ -97,21 +73,7 @@ const Navbar: React.FC = () => {
           <div className="px-4 pt-2 pb-6 space-y-2">
             {NAV_ITEMS.map((item) => {
               if (item.path === '/get-involved') {
-                return (
-                  <div key={item.path}>
-                    {/* Get Involved mobile link commented out:
-                    <NavLink
-                      to={item.path}
-                      onClick={() => setIsOpen(false)}
-                      className={({ isActive }) =>
-                        `block px-3 py-3 rounded-md text-base font-medium ${isActive ? 'bg-orange-50 dark:bg-gray-800 text-saffron' : 'text-charcoal dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800'}`
-                      }
-                    >
-                      {item.label}
-                    </NavLink>
-                    */}
-                  </div>
-                );
+                return null;
               }
 
               return (
@@ -128,12 +90,6 @@ const Navbar: React.FC = () => {
               );
             })}
             <div className="pt-4">
-              {/* <button
-                onClick={handleDonateClick}
-                className="w-full bg-saffron text-white px-4 py-3 rounded-lg font-bold text-center shadow-md"
-              >
-                Donate Now
-              </button> */}
               <button
                 onClick={toggleTheme}
                 className="w-full flex items-center justify-center gap-2 p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"

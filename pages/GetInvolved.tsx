@@ -36,38 +36,6 @@ const GetInvolved: React.FC = () => {
         </div>
       </section>
 
-      {/* Donate Section */}
-      {/* <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center gap-16">
-            <div className="md:w-1/2 relative">
-              <div className="absolute -inset-4 bg-saffron/10 rounded-3xl transform -rotate-2"></div>
-              <img
-                src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                alt="Donate"
-                className="relative rounded-2xl shadow-2xl w-full object-cover h-[500px]"
-              />
-            </div>
-            <div className="md:w-1/2">
-              <div className="w-16 h-16 bg-saffron/10 rounded-2xl flex items-center justify-center mb-8">
-                <Heart size={32} className="text-saffron" />
-              </div>
-              <h2 className="font-heading font-bold text-4xl mb-6 text-charcoal">Make a Donation</h2>
-              <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                Your contribution is more than just money; it's a lifeline. It builds schools, provides clean water, and empowers women to start businesses. 100% of your donation goes directly to the field.
-              </p>
-              <button
-                onClick={() => navigate('/donate')}
-                className="group flex items-center gap-3 px-8 py-4 bg-saffron text-white font-bold rounded-full shadow-lg shadow-saffron/30 hover:bg-[#E55A2B] hover:shadow-saffron/40 transition-all"
-              >
-                Donate Now
-                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       {/* Quote 2 */}
       <section className="py-20 bg-charcoal text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>

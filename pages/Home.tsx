@@ -49,12 +49,6 @@ const Home: React.FC = () => {
             Where your contribution becomes lasting change in health and livelihood.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            {/* <button
-              onClick={() => navigate('/donate')}
-              className="w-full sm:w-auto px-8 py-4 bg-saffron hover:bg-[#E55A2B] text-white rounded-full font-bold text-lg shadow-xl transition-transform transform hover:-translate-y-1"
-            >
-              Donate Now
-            </button> */}
             <button
               onClick={() => navigate('/work')}
               className="w-full sm:w-auto px-8 py-4 bg-white text-teal hover:bg-gray-100 rounded-full font-bold text-lg shadow-xl transition-transform transform hover:-translate-y-1 flex items-center justify-center gap-2"
@@ -105,32 +99,6 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Donation Ask */}
-      {/* <section className="py-20 bg-teal text-white text-center relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-        <div className="relative z-10 max-w-3xl mx-auto px-4">
-          <h2 className="font-heading font-bold text-3xl md:text-5xl mb-6">Create Lasting Change Today</h2>
-          <p className="text-teal-100 text-lg mb-10">
-            Your support can provide books, medicine, and vocational training to those who need it most. All donations are 50% tax-exempt under section 80G.
-          </p>
-
-          <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 inline-block w-full max-w-2xl">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-              {['₹500', '₹1,500', '₹5,000', 'Other'].map((amt) => (
-                <button
-                  key={amt}
-                  onClick={() => navigate('/donate')}
-                  className="bg-white text-teal font-bold py-3 rounded-lg hover:bg-saffron hover:text-white transition-all shadow-sm"
-                >
-                  {amt}
-                </button>
-              ))}
-            </div>
-            <p className="text-sm text-teal-200 mb-2">₹1,500 can educate a child for 6 months.</p>
-          </div>
-        </div>
-      </section> */}
     </div>
   );
 };
